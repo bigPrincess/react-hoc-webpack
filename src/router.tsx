@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Route, BrowserRouter as Router, Redirect, Switch } from 'react-router-dom';
-import {ArticleComponent as ArticleRouter} from './modules/article';
+import { ArticleComponent } from './modules/article';
 
 export class RouterComponent extends React.Component<any, any>{
     
@@ -8,7 +8,7 @@ export class RouterComponent extends React.Component<any, any>{
         return (
             <Router>
                 <Switch>
-                    <Route path="/wz.html" component={ArticleRouter} />
+                    <Route path="/wz.html" component={ArticleComponent} />
                     <Redirect from="/" to="/wz.html" />
                 </Switch>
             </Router>

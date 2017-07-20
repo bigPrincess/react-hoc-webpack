@@ -9,6 +9,8 @@ import '../styles/article.scss';
 export class ArticleComponent extends React.Component<IProps, any> {
     render() {
         console.log("这个是文章详情页哦");
+        console.log(__DEV__);
+        
         return (
             <div >
                 <HeaderComponent

@@ -1,5 +1,3 @@
-##作者: 蔡鹏飞
-
 ## 使用说明:
 npm run start: 运行本地开发环境
 
@@ -40,3 +38,6 @@ npm run api
 
 ##### 1.0.4
 更新rstool-build至1.0.3
+
+## 参考资料
+1、 `webpack devserver ` : https://doc.webpack-china.org/configuration/dev-server/

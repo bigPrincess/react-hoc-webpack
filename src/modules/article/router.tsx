@@ -6,10 +6,9 @@ import { ArticleComponentWithHoc as ArticleComponent } from './components/articl
 export class RouterComponent extends React.Component<any, any>{
 
     render() {
-
         return (
                 <Switch>
-                    <Route path="/wz/155.html" component={ArticleComponent} /> : null}
+                    <Route path="/wz.html" component={ArticleComponent} />
                </Switch>
         );
     }
