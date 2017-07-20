@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { hoc } from '../containers/article';
 import { IProps } from '../constants/article';
-import { HeaderComponent } from "../../common/header/index";
+import { HeaderComponent } from "../../../components/header/index";
 
 import '../styles/article.scss';
 
