@@ -5,11 +5,11 @@
   "main": "src/index.js",
   "scripts": {
     "api": "node app-server",
-    "start": "rstool-build --server --devtool source-map",
-    "dev": "rstool-build --env dev --cdn --hash --devtool source-map",
-    "uat1": "rstool-build --env uat1 --cdn --hash --devtool source-map",
-    "stg": "rstool-build --env stg --cdn --hash",
-    "prd": "rstool-build --env prd --cdn --hash",
+    "start": "rstool-build --server --devtool source-map --hash --useRem",
+    "dev": "rstool-build --env dev --cdn --hash --devtool source-map --useRem",
+    "uat1": "rstool-build --env uat1 --cdn --hash --devtool source-map --useRem",
+    "stg": "rstool-build --env stg --cdn --hash --useRem",
+    "prd": "rstool-build --env prd --cdn --hash --useRem",
     "lint": "eslint --ext .js src"
   },
   "author": "Land",
