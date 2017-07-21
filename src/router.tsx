@@ -12,7 +12,7 @@ export class RouterComponent extends React.Component<any, any>{
             <Router>
                 <Switch>
                     <Route path="/headerapi" component={HeaderapiComponent} />
-                    <Route path="/assemblyapi" component={AssemblyapiComponent} />
+                    <Route path="/componentsapi" component={AssemblyapiComponent} />
                     <Route path="/http" component={HttpDemoComponent} />
                     <Route path="/wz.html" component={ArticleComponent} />
                     <Redirect from="/" to="/wz.html" />

@@ -12,17 +12,16 @@ export class HeaderComponent extends React.Component<IProps, any>{
         super(props, content);
     }
     render(): JSX.Element {
-        console.log(browserVersion);
-        const { title, leftComponent, rightComponent, currentColor, currentBgColor,borderColor } = this.props;
+        const { title, leftComponent, rightComponent, currentColor, currentBgColor, borderColor } = this.props;
         let currentFontColor = currentColor || "#444444";
         let currentBorderColor = borderColor || "#f1f1f1";
         let currentBackgroundColor = currentBgColor || "transparent";
-        let iosAppStyle = (browserVersion.rsApp&&browserVersion.ios)?"ios-app-style":"";
+        let iosAppStyle = (browserVersion.rsApp && browserVersion.ios) ? "ios-app-style" : "";
         return (
-            <div className={this.props.className?("m-header "+iosAppStyle+" "+this.props.className):"m-header "+iosAppStyle} style={{ background: currentBackgroundColor,borderColor:currentBorderColor}}>
-                <div className="m-header-left" style={{ color: currentFontColor }}>{leftComponent}</div>  
-                <div className="m-header-center" style={{ color: currentFontColor }}><div>{title}</div></div>
-                <div className="m-header-right" style={{ color: currentFontColor }}>{rightComponent}</div>
+            <div className={this.props.className ? ("m-header " + iosAppStyle + " " + this.props.className) : "m-header " + iosAppStyle} style={{ background: currentBackgroundColor, borderColor: currentBorderColor }}>
+                {leftComponent && <div className="m-header-left" style={{ color: currentFontColor }}>{leftComponent}</div>}
+                {title && <div className="m-header-center" style={{ color: currentFontColor }}><div>{title}</div></div>}
+                {rightComponent && <div className="m-header-right" style={{ color: currentFontColor }}>{rightComponent}</div>}
             </div>
         );
     }

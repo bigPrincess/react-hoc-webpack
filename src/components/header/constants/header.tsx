@@ -2,17 +2,17 @@ export interface IProps {
     /**
      * 头部中间部分
      */
-    title?: string | JSX.Element;
+    title?: any;
 
     /**
      * 头部左边部分
      */
-    leftComponent?: JSX.Element;
+    leftComponent?: any;
 
     /**
      * 头部右边部分
      */
-    rightComponent?: JSX.Element;
+    rightComponent?: any;
 
     /**
      * 头部当前背景颜色
