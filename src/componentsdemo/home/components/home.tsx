@@ -1,16 +1,17 @@
 import * as React from 'react';
 
-import { hoc } from '../containers/assemblyapi';
-import { IProps } from '../constants/assemblyapi';
+import { hoc } from '../containers/home';
+import { IProps } from '../constants/home';
 import { AccordionComponent } from "../../../components/accordion/index";
 
-import '../styles/assemblyapi.scss';
+import '../styles/home.scss';
 
-export class AssemblyapiComponent extends React.Component<IProps, any> {
+export class HomeComponent extends React.Component<IProps, any> {
     render() {
         return (
             <div >
-                <button onClick={() => { window.location.href = "/headerapi" }}>Header插件</button>
+                <button onClick={() => { window.location.href = "/components/header" }}>Header插件</button>
+                <button onClick={() => { window.location.href = "/components/http" }}>http请求</button>
                  <AccordionComponent
                     currentColor={this.props.gradColorFunction("rgba(68,68,68,0)", "rgba(68,68,68,1)", 50, 50)}
                     currentBgColor={this.props.gradColorFunction("rgba(255,255,255,0)", "rgba(255,255,255,1)", 50, 50)}
@@ -28,4 +29,4 @@ export class AssemblyapiComponent extends React.Component<IProps, any> {
     }
 }
 
-export const AssemblyapiComponentWithHoc = hoc(AssemblyapiComponent);
+export const HomeComponentHoc = hoc(HomeComponent);
