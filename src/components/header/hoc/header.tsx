@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { lifecycle, withHandlers, withState } from 'recompose';
 
-let gradColorFunction = (startColor, endColor, scrollHeight, sTop) => {
+let gradColorFunction = (startColor, endColor, scrollHeight=50, sTop) => {
     let color_reg = /^rgba\((\d+),\s*(\d+),\s*(\d+),\s*(\d+)\)$/;
     let currentStop = sTop ? sTop : (document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop);
 
@@ -83,7 +83,7 @@ export const getHeaderHoc = (scrollHeight: number = 100, sTop?: number) => {
 }
 
 export interface IHeaderColor {
-    gradColorFunction?: (startColor: string, endColor: string, scrollHeight: number, sTop: number) => string;
+    gradColorFunction?: (startColor: string, endColor: string, scrollHeight?: number, sTop?: number) => string;
     handleScroll?: Function;
     dispatchHeader?: Function;
 }
