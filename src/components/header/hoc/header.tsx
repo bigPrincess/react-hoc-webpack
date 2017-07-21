@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { lifecycle, withHandlers, withState } from 'recompose';
 
 let gradColorFunction = (startColor, endColor, scrollHeight=50, sTop) => {
     let color_reg = /^rgba\((\d+),\s*(\d+),\s*(\d+),\s*(\d+)\)$/;
@@ -17,7 +16,6 @@ let gradColorFunction = (startColor, endColor, scrollHeight=50, sTop) => {
     let defaultOpacityNum = (startColor.match(color_reg))[4];
     let endOpacityNum = (endColor.match(color_reg))[4];
     let opacityRatio = Math.abs(defaultOpacityNum - endOpacityNum) / scrollHeight;
-    //let opacityNum ;
 
     if (defaultColorNum > endColorNum) {
         colorNum = Number(defaultColorNum - Math.ceil(currentStop * colorRatio)) < Number(endColorNum) ? Number(endColorNum) : (defaultColorNum - Math.ceil(currentStop * colorRatio));
@@ -35,28 +33,6 @@ let gradColorFunction = (startColor, endColor, scrollHeight=50, sTop) => {
 }
 
 const HeaderColorHoc = (scrollHeight: number, sTop: number, Component: any) => {
-    @withState("header", "dispatchHeader", 1)
-    @withHandlers({
-        handleScroll: (props: IHeaderColor) => {
-            return () => {
-                let currentSTop = sTop ? sTop : (document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop);
-
-                if (currentSTop > scrollHeight) {
-                    return null;
-                }
-
-                props.dispatchHeader((header: number) => header++);
-            }
-        }
-    })
-    @lifecycle({
-        componentDidMount: function () {
-            //window.addEventListener('scroll', this.props.handleScroll.bind(this, scrollHeight));
-        },
-        componentWillUnmount: function () {
-            //window.removeEventListener('scroll', this.props.handleScroll.bind(this, scrollHeight));
-        }
-    })
     class Hoc extends React.Component<IHeaderColor, any> {
         constructor(props, content) {
             super(props, content);
