@@ -9,7 +9,6 @@ export const hoc = compose<IProps, any>(
         handleScroll: (props: IProps) => {
             return (e) => {
                 let sTop = e.currentTarget.scrollTop || window.pageYOffset || document.body.scrollTop;
-                console.log(sTop);
                 props.setScrollTop(sTop);
             }
         }
