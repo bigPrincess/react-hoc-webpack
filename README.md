@@ -41,3 +41,8 @@ npm run api
 
 ## 参考资料
 1、 `webpack devserver ` : https://doc.webpack-china.org/configuration/dev-server/
+2、 `koa中间件机制详解`: https://segmentfault.com/a/1190000009158828 
+3、`url-search-params` ：定义了很多个用来处理 URL 参数串的方法。 https://developer.mozilla.org/zh-CN/docs/Web/API/URLSearchParams
+4、 `modelproxy`：轻量级的接口配置建模框架  https://github.com/sosout/modelproxy
+5、 `isomorphic-fetch`：fetch请求 https://www.npmjs.com/package/isomorphic-fetch-http
+6、 `FormData`: api   https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/FormData

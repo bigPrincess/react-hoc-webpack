@@ -16,6 +16,9 @@
     "license": "MIT",
     "dependencies": {
         "babel-plugin-import": "^1.1.1",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-stage-2": "^6.24.1",
         "backbone": "^1.3.3",
         "body-parser": "^1.17.1",
         "eslint-config-rs": "^0.1.4",
@@ -30,7 +33,11 @@
         "recompose": "^0.23.1",
         "rstool-build": "1.0.1",
         "ts-loader": "^2.0.1",
-        "typescript": "^2.2.1"
+        "typescript": "^2.2.1",
+        "mockjs": "^1.0.1-beta3",
+        "modelproxy": "^0.5.14",
+        "modelproxy-engine-mockjs": "^0.4.1",
+        "url-search-params": "^0.9.0"
     },
     "optionalDependencies": {
         "@types/classnames": "^2.2.0",
