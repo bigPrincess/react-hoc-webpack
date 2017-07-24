@@ -21,6 +21,7 @@ export class ImgZoomInComponent extends React.Component<IProps, any>{
                         onCloseRequest={() => props.zoomOut()}
                         mainSrc={props.imgUrl}
                     />
+                    
                 }
             </div>
             

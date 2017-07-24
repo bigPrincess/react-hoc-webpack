@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from "react-router-dom";
 
 import { hoc } from '../containers/home';
 import { IProps } from '../constants/home';
@@ -9,10 +10,12 @@ import '../styles/home.scss';
 export class HomeComponent extends React.Component<IProps, any> {
     render() {
         return (
-            <div >
-                <button onClick={() => { window.location.href = "/components/header" }}>Header插件</button>
-                <button onClick={() => { window.location.href = "/components/http" }}>http请求</button>
-                 <AccordionComponent title="这个是插件DEMO页哦"/>
+            <div className="demo-list">
+                <div><Link to="/components/header">Header插件 ⇨</Link></div>
+                <div><Link to="/components/http">http请求 ⇨</Link></div>
+                <div><Link to="/components/imgzoomin">图片点击放大 ⇨</Link></div>         
+                
+                <AccordionComponent title="这个是插件DEMO页哦"/>
             </div>
         );
     }
