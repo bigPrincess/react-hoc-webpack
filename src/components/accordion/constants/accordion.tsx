@@ -1,5 +1,28 @@
 export interface IProps {
     /**
+     * 菜单数据
+     */
+    menuArrs ?: '';
+
+    /**
+     * 事件类型
+     */
+    eveType ?: string;
+    /**
+     * 调用子菜单
+     */
+    renderCreateSubMenu ?: null; 
+    /**
+     * 回调函数
+     */
+    renderCallBack ?: null;
+
+    /**
+     *触发事件
+     */
+    clickItemCallBack ?: null;
+
+    /**
      * 头部中间部分
      */
     title?: string | JSX.Element;
