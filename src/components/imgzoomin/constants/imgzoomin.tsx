@@ -4,4 +4,5 @@ export interface IProps {
     zoomOut:Function;
     className?:string;
     isOpen?:boolean;
+    setOpenState?:Function;
 }

@@ -7,14 +7,6 @@ export const hoc = compose<IProps, any>(
         zoomIn:(props: IProps)=>{
             return()=>{
                 props.setOpenState(true);
-                // let imgZoomInDiv = document.getElementById("img-zoom-in-popup") || document.createElement('div');
-                // let node = e.target.cloneNode(true);
-                // imgZoomInDiv.id = 'img-zoom-in-popup';           
-                // imgZoomInDiv.appendChild(node);
-                // document.body.appendChild(imgZoomInDiv);
-                // imgZoomInDiv.onclick=()=>{
-                //     document.body.removeChild(imgZoomInDiv);
-                // }
             }
         },
         zoomOut:(props: IProps)=>{
