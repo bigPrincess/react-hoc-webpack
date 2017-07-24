@@ -15,11 +15,11 @@ export class HttpDemoComponent extends React.Component<IProps, any> {
                         <ul className="info">
                             <li>
                                 <span className="info-title">URL:</span>
-                                <span className="info-detail">http://fc-c.dev.rs.com/parameter/loupan</span>
+                                <span className="info-detail">http://fc-c.dev.rs.com/order/order</span>
                             </li>
                             <li>
                                 <span className="info-title">Method:</span>
-                                <span className="info-detail">GET</span>
+                                <span className="info-detail">POST</span>
                             </li>
                             <li>
                                 <span className="info-title">参数:</span>

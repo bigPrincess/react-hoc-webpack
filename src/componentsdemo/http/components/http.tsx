@@ -10,6 +10,7 @@ export class HttpDemoComponent extends React.Component<IProps, any> {
         return (
             <div className="http-demo-content">
                 <ul>
+                    {/* <Link to={`/components/http/api`} ><li> api </li></Link> */}
                     <Link to={`/components/http/get-noheader-noparams`} ><li> get-无header-无参数 </li></Link>
                     <Link to={`/components/http/get-noheader-params`} ><li> get-无header-有参数 </li></Link>
                     <Link to={`/components/http/post_noheader_params`} ><li> post-无header-有参数 </li></Link>

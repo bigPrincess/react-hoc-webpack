@@ -9,7 +9,7 @@ export const hoc = compose<IProps, any>(
     withHandlers({
         http_request:(props: IProps) => {
             return()=>{
-                 props.execute("value", ModelProxyKeys. api_get_noheader_noparam, null)
+                 props.execute("value", ModelProxyKeys.api_get_noheader_noparam, null)
                  .then((data)=>{
                     console.log(data);
                     props.set_http_reault((value)=>{
