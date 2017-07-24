@@ -4,6 +4,7 @@ import { hoc } from '../containers/headerapi';
 import { IProps } from '../constants/headerapi';
 
 import '../styles/headerapi.scss';
+import { ImgZoomInComponent } from "../../../components/imgzoomin/index";
 
 export class HeaderapiComponent extends React.Component<IProps, any> {
     render() {
@@ -74,6 +75,13 @@ export class HeaderapiComponent extends React.Component<IProps, any> {
                             }
                         </tbody>
                     </table>
+                </div>
+                <div>
+                    <h4>DEMO:</h4>
+                    <p className="demo-title">有渐变的header</p>
+                    <ImgZoomInComponent imgUrl="../../assets/images/header_01.png" className="img-zoom-in-btn"/>
+                    <p>没有渐变的header</p>
+                    <ImgZoomInComponent imgUrl="../../assets/images/header_02.png" className="img-zoom-in-btn"/>
                 </div>
             </div>
         );

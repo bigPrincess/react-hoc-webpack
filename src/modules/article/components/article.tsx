@@ -29,7 +29,7 @@ export class ArticleComponent extends React.Component<IProps, any> {
                     currentBgColor="#fdd"
                     borderColor="#000"
                     className="headerTwotop"
-                    title="标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题"
+                    title="标题标题"
                     leftComponent={
                         <div>返回</div>
                     }
