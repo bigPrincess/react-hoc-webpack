@@ -35,4 +35,23 @@
         font-weight: bold;
         color: #333;
     }
+    h4{
+        margin: 20px 0;
+        font-weight: bold;
+        color: #333;
+    }
+}
+.grad-header-demo-content,.commom-header-demo-content{
+    .back{
+        display: inline-block;
+        color:#444;
+    }
+    .main-content{
+        margin-top: 100px;
+        padding: 10px;
+    }
+    .img-zoom-in-btn{
+        width:300px;
+        height: auto;
+    }
 }
