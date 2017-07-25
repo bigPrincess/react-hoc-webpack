@@ -23,6 +23,11 @@ export interface IProps {
     clickItemCallBack ?: null;
 
     /**
+     *触发事件
+     */
+    renderClickItem ?: Function;
+
+    /**
      * 头部中间部分
      */
     title?: string | JSX.Element;

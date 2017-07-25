@@ -1,13 +1,19 @@
 .m-accordion {
+    border: 1px solid #ccc;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+
         ul{ 
             margin:0; 
             padding:0;
+            background: #FFF;
             list-style:none; 
             
             li { 
-                margin: 0 .32rem .24rem;
+                margin: 0 24px 18px;
                 background-color: #fff;
-                border-radius: .04rem;
+                border-radius: 3px;
                 text-indent:3em; 
                 white-space:nowrap; 
 
@@ -15,16 +21,16 @@
                     position: relative;
                     background-color: #fff;
                     border-top: 1px solid #ddd;
-                    background: #444359;
+                    // background: #444359;
                     display: none;
                 }
                 .link{ 
                     padding: 0;
-                    padding-left: .48rem;
-                    height: 1.4rem;
-                    line-height: 1.4rem;
+                    padding-left: 36px;
+                    height: 140px; 
+                    line-height: 140px; 
                     color: #404040;
-                    font-size: .32rem;
+                    font-size: 24px;
                     cursor:pointer; 
                     -webkit-transition: all 0.4s ease;
                     -o-transition: all 0.4s ease;
@@ -33,9 +39,9 @@
                 a{ 
                     display:block; 
                     outline:none; 
-                    height:25px; 
-                    line-height:25px; 
-                    margin:1px 0; 
+                    height: 140px; 
+                    line-height: 140px; 
+                    margin: 1px 0; 
                     color:#1A385C; 
                     text-decoration:none;
                     &:hover{ 
@@ -53,50 +59,18 @@
                     border:none;
 
                 }
-                &.active {
-                    ul {
+                &.active > ul {
                         display: block;
+                        -webkit-transition: all 0.4s ease;
+                        -o-transition: all 0.4s ease;
+                        transition: all 0.4s ease;
                         // li:hover {
                         //     background: #b63b4d;
                         //     color: #FFF;
                         // }
-                    }
                 }
-
             }
          }
 
 
 }
-
-
-// .m-accordion{
-//     width:100%;
-//     height:88px;
-//     -webkit-box-align: center;
-//     -webkit-align-items: center;
-//     -ms-flex-align: center;
-//     align-items: center;
-//     border-bottom: 1px solid #f1f1f1;
-
-//     ul {
-//         li {
-//             margin: 0 .32rem .24rem;
-//             background-color: #fff;
-//             border-radius: .04rem;
-//             div {
-//                 padding: 0;
-//                 padding-left: .48rem;
-//                 height: 1.4rem;
-//                 line-height: 1.4rem;
-//                 color: #404040;
-//                 font-size: .32rem;
-//             }
-//             ul {
-//                 position: relative;
-//                 background-color: #fff;
-//                 border-top: 1px solid #ddd;
-//             }
-//         }
-//     }
-// }
