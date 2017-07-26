@@ -15,6 +15,7 @@ export class RouterComponent extends React.Component<any, any>{
                         <Route path="/components/http" component={HttpDemoRouter} />
                         <Route path="/components/header" component={HeaderDemoRouter} />
                         <Route path="/components/imgzoomin" component={ImgZoomInDemoRouter} />
+                        <Route path="/components/weixin" component={ImgZoomInDemoRouter} />
                         <Route path="/components" component={HomeComponent} />
                </Switch>
         );
