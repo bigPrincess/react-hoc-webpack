@@ -28,6 +28,10 @@ export class HomeComponent extends React.Component<IProps, any> {
                     {
                         "name": "多级折叠菜单",
                         "url": "accordion"
+                    },
+                    {
+                        "name": "icon图标",
+                        "url": "icon"
                     }
                 ]
             }
