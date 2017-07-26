@@ -2,6 +2,7 @@ import * as  React from 'react';
 import { IProps } from '../constants/accordion';
 import { hoc } from '../containers/accordion';
 import { Link } from 'react-router-dom';
+import {IconComments} from '../../icons';
 
 
 import '../styles/accordion.scss';
@@ -22,8 +23,11 @@ export class AccordionComponent extends React.Component<IProps, any>{
                     menuarrs.map(function (key, index) {
                         return (
                                 <li>
-                                    <div className="link"><span className='menu-name'>{key.name}</span>  <i className="fa fa-chevron-down"></i></div>
-                                    {(key && key.submenu.length >= 1) ? own.renderCreateSubMenu(key.submenu) : null}
+                                    <div className="link">
+                                        <span className='menu-name'>{key.name}</span>                  
+                                            <IconComments width={accData.width || 40} height={accData.height || 40} color={accData.currentColor} type='more'/>  
+                                        </div>
+                                    {(key && key.submenu.length >= 1) ? own.renderCreateSubMenu(key.submenu,accData) : null}
                                 </li>
                             )
                     })
@@ -35,7 +39,7 @@ export class AccordionComponent extends React.Component<IProps, any>{
     /**
 	 * 创建submenu菜单栏
 	 */
-    renderCreateSubMenu(SubMenu) {
+    renderCreateSubMenu(SubMenu,accData) {
         let own = this;
         return (
             <ul className="submenu">
@@ -43,15 +47,17 @@ export class AccordionComponent extends React.Component<IProps, any>{
                     SubMenu.map(function (key, index) {
                         return (
                             <li>
-                                {/*<Link to={{ pathname: `${location.pathname}/${key.url}.html`, state: { modal: true } }}>*/}
                                 {(key.url && key.url.length >= 1) ? (
                                     <Link to={{ pathname: `${location.pathname}/${key.url}`}}>
                                         <div className="link"><span className='menu-name'>{key.name}</span>  <i className="fa fa-chevron-down"></i></div>
                                     </Link>
                                 ) : 
-                                    <div className="link"><span className='menu-name'>{key.name}</span>  <i className="fa fa-chevron-down"></i></div>
+                                    <div className="link">
+                                        <span className='menu-name'>{key.name}</span>  
+                                            <IconComments width={accData.width || 40} height={accData.height || 40} color={accData.currentColor} type='more'/>                                      
+                                        </div>
                                 }
-                                {(key.submenu && key.submenu.length >= 1) ? (own.renderCreateSubMenu(key.submenu)) : null}
+                                {(key.submenu && key.submenu.length >= 1) ? (own.renderCreateSubMenu(key.submenu,accData)) : null}
                             </li>
                         )
                     })
@@ -63,7 +69,7 @@ export class AccordionComponent extends React.Component<IProps, any>{
     render() {
         let accData = this.props;
         let menuArrs  =  accData.menuArrs || '';
-        let eveType  =  accData.eveType || 'click';
+
         console.log(menuArrs);
         // const { title, leftComponent, rightComponent, currentColor, currentBgColor,borderColor } = this.props;
         // let currentBorderColor = borderColor || "#f1f1f1";

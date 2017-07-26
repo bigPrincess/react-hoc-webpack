@@ -45,7 +45,7 @@ export class HomeComponent extends React.Component<IProps, any> {
                 <AccordionComponent title="这个是插件DEMO页哦"/>
                 <div><Link to="/components/imgzoomin">图片点击放大 ⇨</Link></div>         */}
                 
-                <AccordionComponent menuArrs={accordarr} eveType = {'click'} title="这个是插件DEMO页哦"/>
+                <AccordionComponent width={'30'} height={'30'} menuArrs={accordarr} eveType = {'click'} currentColor={'rgba(102,102,102,1)'} title="这个是插件DEMO页哦"/>
             </div>
         );
     }

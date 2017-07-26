@@ -12,35 +12,6 @@ export interface IProps {
      * 调用子菜单
      */
     renderCreateSubMenu ?: null; 
-    /**
-     * 回调函数
-     */
-    renderCallBack ?: null;
-
-    /**
-     *触发事件
-     */
-    clickItemCallBack ?: null;
-
-    /**
-     *触发事件
-     */
-    renderClickItem ?: Function;
-
-    /**
-     * 头部中间部分
-     */
-    title?: string | JSX.Element;
-
-    /**
-     * 头部左边部分
-     */
-    leftComponent?: JSX.Element;
-
-    /**
-     * 头部右边部分
-     */
-    rightComponent?: JSX.Element;
 
     /**
      * 头部当前背景颜色
@@ -48,15 +19,15 @@ export interface IProps {
     currentBgColor?:string;
 
     /**
-     * 头部当前颜色
+     * 右箭头icon颜色
      */
     currentColor?:string;
     /**
-     * 头部边框颜色
+     * 右边符号宽度
      */
-    borderColor?:string;
+    width?:number;
     /**
-     * 头部className
+     * 右边符号高度
      */
-    className?:string;
+    height?:number;
 }

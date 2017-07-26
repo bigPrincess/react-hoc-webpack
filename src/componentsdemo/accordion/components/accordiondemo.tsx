@@ -106,7 +106,6 @@ export class AccordionDemoComponent extends React.Component<IProps, any> {
                 ]
             }
         ]
-        alert(2);
         return (
             <div >
                 <AccordionComponent menuArrs={accordarr} eveType = {'click'} title="这个是插件DEMO页哦"/>
